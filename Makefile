@@ -6,22 +6,21 @@
 #    By: abelrodr <abelrodr@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/19 15:37:40 by abelrodr          #+#    #+#              #
-#    Updated: 2023/09/11 11:47:07 by abelrodr         ###   ########.fr        #
+#    Updated: 2023/09/13 11:57:28 by abelrodr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = pipex
-NAME_BONUS = pipex_bonus
-
+NAME = push_swap
+NAME_BONUS = checker
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra
+UNAME = $(shell uname)
+INC = -I $(INC_DIR) -I $(LIBFT_DIR)/inc
+LIBFT = $(LIBFT_DIR)/libft.a
 RM = rm -rf
 
-SRCS = $(wildcard $(SRC_PATH)/*.c)
-OBJS = $(patsubst $(SRC_PATH)/%.c, $(OBJ_PATH)/%.o, $(SRCS))
-
-SRCS_BONUS = $(wildcard $(BONUS_PATH)/*.c)
-OBJS_BONUS = $(patsubst $(BONUS_PATH)/%.c, $(OBJ_PATH)/%.o, $(SRCS_BONUS))
+#########################  Sources  ###########################################
+SRC_MAIN = $(SRC_DIR)/push_swap/main.c
 
 ######################### Directories  #################################
 OBJ_PATH = obj
